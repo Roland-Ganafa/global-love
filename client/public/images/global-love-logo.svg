@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="300" height="300" viewBox="0 0 300 300" xmlns="http://www.w3.org/2000/svg">
+  <g transform="translate(50, 50)">
+    <!-- Hand shape -->
+    <path d="M100,120 C60,100 40,140 60,180 C80,220 120,200 140,160" fill="none" stroke="#333333" stroke-width="15"/>
+    
+    <!-- Person shape forming heart -->
+    <path d="M120,80 C160,40 200,80 160,140 L140,160 L120,140 C80,80 120,40 120,80" fill="#FF1493"/>
+    
+    <!-- Text -->
+    <text x="0" y="220" font-family="Arial" font-size="24" font-weight="bold">
+      <tspan x="0" fill="#FF1493">Global</tspan>
+      <tspan x="80" fill="#333333">Love</tspan>
+    </text>
+    <text x="0" y="250" font-family="Arial" font-size="12" fill="#333333">True People Get True Love</text>
+  </g>
+</svg>

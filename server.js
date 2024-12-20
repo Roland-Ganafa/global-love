@@ -1,21 +1,18 @@
 require('dotenv').config();
 const express = require('express');
-const mongoose = require('mongoose');
 const cors = require('cors');
 const http = require('http');
 const socketIo = require('socket.io');
 const path = require('path');
-const connectDB = require('./config/db');
 
-// Connect to MongoDB
-connectDB();
-
-// Import routes
-const authRoutes = require('./routes/auth');
-const userRoutes = require('./routes/users');
-const chatRoutes = require('./routes/chat');
-const contentRoutes = require('./routes/content');
-const mediaRoutes = require('./routes/media');
+// In-memory storage
+const db = {
+  users: [],
+  messages: [],
+  content: [],
+  chats: [],
+  media: [],
+};
 
 const app = express();
 const server = http.createServer(app);
@@ -107,8 +104,7 @@ if (process.env.NODE_ENV === 'production') {
   });
 }
 
-const PORT = process.env.PORT || 5000;
-
+const PORT = process.env.PORT || 8080;
 server.listen(PORT, () => {
   console.log(`Server is running on port ${PORT}`);
 });
